@@ -1,0 +1,96 @@
+.container {
+  padding-top: 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+#resultModal .modal-body {
+  font-size: 18px;
+}
+
+#resultModal #finalIncome {
+  font-weight: bold;
+}
+
+.error {
+  border-color: red;
+}
+
+/* .error-icon {
+  color: red;
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  cursor: pointer;
+} */
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+.error-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  border-radius: 50%; /* Makes it circular */
+  width: 25px; /* Adjust size as needed */
+  height: 25px; /* Adjust size as needed */
+  text-align: center; /* Centers the content horizontally */
+  line-height: 25px; /* Centers the content vertically */
+  background-color: #dcd2d1; /* Background color for the warning icon */
+  color: rgb(233, 17, 17); /* Text color */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  right: 0;
+  bottom: 100%;
+  z-index: 1;
+  font-size: 0.9rem;
+  width: max-content;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #f44336 transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.active {
+  opacity: 1;
+}
+.hidden {
+  display: none;
+}

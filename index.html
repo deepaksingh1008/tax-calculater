@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tax Calculator</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!-- Form Container -->
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <!-- Card -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Tax Form -->
+              <form id="taxForm" novalidate>
+                <h4 class="card-title mb-4">Tax Calculator</h4>
+                <!-- Gross Annual Income Field -->
+                <div class="form-group">
+                  <label for="grossIncome">Gross Annual Income</label>
+                  <input
+                    type="number"
+                    id="grossIncome"
+                    class="form-control"
+                    placeholder="Enter gross annual income"
+                  />
+                  <div class="error-icon hidden" id="grossErrorIcon">!</div>
+                  <div class="tooltip" id="grossTooltip">
+                    Gross Income is required
+                  </div>
+                </div>
+                <!-- Extra Income Field -->
+                <div class="form-group">
+                  <label for="extraIncome">Extra Income</label>
+                  <input
+                    type="number"
+                    id="extraIncome"
+                    class="form-control"
+                    placeholder="Enter extra income"
+                  />
+                  <div class="error-icon hidden" id="extraErrorIcon">!</div>
+                  <div class="tooltip" id="extraTooltip">
+                    Extra income is required
+                  </div>
+                </div>
+                <!-- Age Group Dropdown -->
+                <div class="form-group">
+                  <label for="ageGroup">Age Group</label>
+                  <select id="ageGroup" class="form-control">
+                    <option value="">Select Age Group</option>
+                    <option value="under40">&lt; 40</option>
+                    <option value="between40and60">≥ 40 &amp; &lt; 60</option>
+                    <option value="over60">≥ 60</option>
+                  </select>
+                </div>
+                <!-- Deductions Field -->
+                <div class="form-group">
+                  <label for="deductions">Deductions</label>
+                  <input
+                    type="number"
+                    id="deductions"
+                    class="form-control"
+                    placeholder="Enter applicable deductions"
+                  />
+                  <div class="error-icon hidden" id="deductionErrorIcon">!</div>
+                  <div class="tooltip" id="deductionTooltip">
+                    Deduction is required
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structure for Results -->
+    <div class="modal" tabindex="-1" role="dialog" id="resultModal">
+      <!-- Modal Content -->
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tax Calculation Result</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Your overall income after tax deductions will be:
+              <span id="finalIncome"></span>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
