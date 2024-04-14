@@ -56,6 +56,11 @@ The net income is calculated based on the following criteria:
   - For age group between 40 and 60: Tax rate is 40%.
   - For age group over 60: Tax rate is 10%.
 - If the taxable income is less than or equal to 800,000: No tax.
+## Live
+
+[Live](tax-calculater-blru78azx-ds4850716gmailcoms-projects.vercel.app)
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
